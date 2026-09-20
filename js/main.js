@@ -56,6 +56,24 @@ magnets.forEach((el) => {
   });
 });
 
+const toast = document.getElementById("toast");
+const copyButtons = document.querySelectorAll(".copy-ca");
+copyButtons.forEach((button) => {
+  button.addEventListener("click", async () => {
+    const value = button.getAttribute("data-ca") || "";
+    try {
+      await navigator.clipboard.writeText(value);
+      if (toast) {
+        toast.textContent = "Mint copied";
+        toast.classList.add("show");
+        window.setTimeout(() => toast.classList.remove("show"), 1800);
+      }
+    } catch {
+      window.prompt("Copy mint", value);
+    }
+  });
+});
+
 document.addEventListener("pointermove", (event) => {
   const x = (event.clientX / window.innerWidth) * 100;
   const y = (event.clientY / window.innerHeight) * 100;

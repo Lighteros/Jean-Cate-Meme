@@ -513,6 +513,68 @@ footer {
   margin: 28px 0 8px;
 }
 
+.ca-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  background: rgba(22, 36, 51, 0.22);
+}
+
+.ca-bar span {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+}
+
+.ca-bar code {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.copy-ca {
+  padding: 6px 12px;
+  border: 1px solid var(--cream);
+  color: var(--cream);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.copy-ca:hover {
+  background: var(--cream);
+  color: var(--navy);
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  z-index: 30;
+  transform: translate(-50%, 16px);
+  padding: 10px 16px;
+  background: var(--ivory);
+  color: var(--navy);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
 .facts {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -668,6 +730,11 @@ footer {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   opacity: 0.62;
+}
+
+.dossier li strong {
+  overflow-wrap: anywhere;
+  font-size: 0.92rem;
 }
 
 .agenda {
