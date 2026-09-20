@@ -320,13 +320,21 @@ footer {
   background: var(--cream);
 }
 
-.ico {
+.ico,
+.mark {
   width: 18px;
   height: 18px;
   display: inline-block;
+}
+
+.ico {
   background: currentColor;
   -webkit-mask: center / contain no-repeat;
   mask: center / contain no-repeat;
+}
+
+.mark {
+  object-fit: contain;
 }
 
 .ico-x {
@@ -339,9 +347,14 @@ footer {
   mask-image: url("../assets/icons/dexscreener.svg");
 }
 
-.ico-uni {
-  -webkit-mask-image: url("../assets/icons/uniswap.svg");
-  mask-image: url("../assets/icons/uniswap.svg");
+.ico-jup {
+  -webkit-mask-image: url("../assets/icons/jupiter.svg");
+  mask-image: url("../assets/icons/jupiter.svg");
+}
+
+.ico-sol {
+  -webkit-mask-image: url("../assets/icons/solana.svg");
+  mask-image: url("../assets/icons/solana.svg");
 }
 
 .hero {
@@ -790,7 +803,8 @@ footer {
   background-size: 10px 10px;
 }
 
-.join-card .ico {
+.join-card .ico,
+.join-card .mark {
   width: 28px;
   height: 28px;
 }
